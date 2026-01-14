@@ -1,0 +1,150 @@
+!DOCTYPE html
+html lang=es
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleSagaNetwork  Estado del Servidortitle
+    style
+        root {
+            --bg #f0f7ff;
+            --card-bg #ffffff;
+            --primary #1e88e5;
+            --online #81c784;
+            --offline #e57373;
+            --text-main #546e7a;
+            --accent-soft #e3f2fd;
+        }
+
+        body {
+            font-family 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color var(--bg);
+            color var(--text-main);
+            display flex;
+            flex-direction column;
+            align-items center;
+            justify-content center;
+            min-height 100vh;
+            margin 0;
+        }
+
+        .status-card {
+            background var(--card-bg);
+            padding 2rem;
+            border-radius 20px;
+            box-shadow 0 10px 30px rgba(30, 136, 229, 0.1);
+            text-align center;
+            width 90%;
+            max-width 400px;
+        }
+
+        .logo-area {
+            font-size 3rem;
+            margin-bottom 1rem;
+        }
+
+        h1 {
+            color var(--primary);
+            margin 0;
+            font-size 1.8rem;
+        }
+
+        .status-badge {
+            display inline-block;
+            margin-top 1rem;
+            padding 8px 20px;
+            border-radius 50px;
+            font-weight bold;
+            text-transform uppercase;
+            letter-spacing 1px;
+            font-size 0.9rem;
+        }
+
+        .online {
+            background-color #e8f5e9;
+            color var(--online);
+            border 1px solid var(--online);
+        }
+
+        .info-grid {
+            margin-top 2rem;
+            display grid;
+            gap 1rem;
+        }
+
+        .info-item {
+            background var(--accent-soft);
+            padding 15px;
+            border-radius 12px;
+        }
+
+        .label {
+            display block;
+            font-size 0.8rem;
+            color var(--primary);
+            font-weight bold;
+            margin-bottom 5px;
+        }
+
+        .value {
+            font-size 1.1rem;
+            font-weight 600;
+        }
+
+        .ip-box {
+            cursor pointer;
+            transition transform 0.2s;
+        }
+
+        .ip-boxhover {
+            transform scale(1.02);
+        }
+
+        footer {
+            margin-top 2rem;
+            font-size 0.8rem;
+            opacity 0.7;
+        }
+    style
+head
+body
+
+    div class=status-card
+        div class=logo-area💎div
+        h1SagaNetworkh1
+        
+        div class=status-badge online
+            ● Servidor Online
+        div
+
+        div class=info-grid
+            div class=info-item ip-box onclick=copyIP()
+                span class=labelCLIC PARA COPIAR IPspan
+                span class=value id=serverIPplay.saganetwork.comspan
+            div
+
+            div class=info-item
+                span class=labelJUGADORES ACTUALESspan
+                span class=value42  100span
+            div
+
+            div class=info-item
+                span class=labelVERSIÓNspan
+                span class=value1.20.x - 1.21.xspan
+            div
+        div
+    div
+
+    footer
+        Actualizado automáticamente cada 5 minutos
+    footer
+
+    script
+        function copyIP() {
+            const ip = document.getElementById('serverIP').innerText;
+            navigator.clipboard.writeText(ip);
+            alert(¡IP copiada  + ip + !);
+        }
+    script
+
+body
+html
