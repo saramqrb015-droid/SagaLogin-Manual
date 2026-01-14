@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SagaLogin | Centro de Recursos</title>
+    <style>
+        :root {
+            --bg: #f0f7ff;
+            --primary: #1976d2;
+            --accent: #bbdefb;
+            --text: #455a64;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .main-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
+        p { margin-bottom: 30px; opacity: 0.8; }
+
+        .button-container {
+            display: grid;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn-manual {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .btn-status {
+            background-color: #e3f2fd;
+            color: #1e88e5;
+            border: 2px solid var(--accent);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            filter: brightness(0.95);
+        }
+
+        .icon { font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+
+    <div class="main-card">
+        <h1>SagaLogin 🛡️</h1>
+        <p>Bienvenido al centro de gestión de SagaNetwork. Selecciona una opción para continuar.</p>
+        
+        <div class="button-container">
+            <a href="manual.html" class="btn btn-manual">
+                <span class="icon">📖</span> Ver Manual de Comandos
+            </a>
+            
+            <a href="status.html" class="btn btn-status">
+                <span class="icon">🌐</span> Estado del Servidor
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
