@@ -149,7 +149,7 @@
         <h1>Skyfrom Network</h1>
         <p>Una experiencia única en las nubes</p>
         <div class="server-status">
-            IP: <span>play.skyfrom.net</span> 🟢 Online
+            IP: <span>skyfrom.xyz</span> 🟢 Online
         </div>
     </header>
 
@@ -158,10 +158,10 @@
         
         <div class="grid-plugins">
             <div class="card">
-                <h3>SkyBlock</h3>
+                <h3>SagaLogin</h3>
                 <p>Crea tu isla y compite por ser el Top #1 del servidor.</p>
                 <br>
-                <button class="btn-guia" onclick="openModal('skyblock')">Ver Guía</button>
+                <button class="btn-guia" onclick="openModal('SagaLogin')">Ver Guía</button>
             </div>
 
             <div class="card">
@@ -190,14 +190,70 @@
 
     <script>
         const guias = {
-            skyblock: `
-                <h2>Guía de SagaLogin</h2>
-                <ul>
-                    <li><strong>/is create:</strong> Crea tu isla inicial.</li>
-                    <li><strong>/is invite:</strong> Invita a tus amigos a tu isla.</li>
-                    <li><strong>/is top:</strong> Mira quiénes son los mejores.</li>
-                    <li><strong>Tip:</strong> Usa el generador de cobble para obtener minerales valiosos.</li>
-                </ul>`,
+            SagaLogin: `
+                <h2>👥 Comandos de Usuario</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Comando</th>
+                    <th>Descripción</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="command">/register &lt;p&gt; &lt;p&gt;</span></td>
+                    <td>Registra una nueva cuenta.</td>
+                    <td><span class="badge badge-user">Jugador</span></td>
+                </tr>
+                <tr>
+                    <td><span class="command">/login &lt;p&gt;</span></td>
+                    <td>Inicia sesión en el servidor.</td>
+                    <td><span class="badge badge-user">Jugador</span></td>
+                </tr>
+                <tr>
+                    <td><span class="command">/premium</span></td>
+                    <td>Activa el Auto-Login (Solo Original).</td>
+                    <td><span class="badge badge-user">Jugador</span></td>
+                </tr>
+                <tr>
+                    <td><span class="command">/unregister</span></td>
+                    <td>Borra tu propia cuenta.</td>
+                    <td><span class="badge badge-user">Jugador</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>🛠️ Comandos de Administración</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Comando</th>
+                    <th>Descripción</th>
+                    <th>Permiso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="command">/sa reload</span></td>
+                    <td>Recarga el config.yml sin reiniciar.</td>
+                    <td>sagalogin.admin</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/sa suspend &lt;jugador&gt;</span></td>
+                    <td>Bloquea una cuenta o IP sospechosa.</td>
+                    <td>sagalogin.admin</td>
+                </tr>
+                <tr>
+                    <td><span class="command">/sa unsuspend &lt;jugador&gt;</span></td>
+                    <td>Desbloquea y resetea IP del jugador.</td>
+                    <td>sagalogin.admin</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>`,
             economia: `
                 <h2>Guía de Economía</h2>
                 <ul>
